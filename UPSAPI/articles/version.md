@@ -2,8 +2,11 @@
 
 Created :date: March 12, 2024
 
-Last update :arrow_up::date: April 8, 2024
+Last update :arrow_up::date: April 11, 2024
 
+* **1.0.0.3**
+*   :cat: .gitattributes
+*   :cat: Update links to *.md instead of *.html files
 * **1.0.0.2**
 *   :cat: Address validation 
 * **1.0.0.1**
