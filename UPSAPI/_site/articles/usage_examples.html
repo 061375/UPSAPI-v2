@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Suggested Usage Examples </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Suggested Usage Examples ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="suggested-usage-examples">Suggested Usage Examples</h1>
+
+<p>These are minimum examples to create a shipment and retrieve a label. </p>
+<h3 id="shipments--object-oriented">Shipments :: Object Oriented</h3>
+<pre><code>UPSAPIv2.api.Shipments Shipments = new UPSAPIv2.api.Shipments();
+UPSAPIv2.ShipmentProperties shipmentProperties = new UPSAPIv2.ShipmentProperties();
+shipmentProperties.RefNumber = &quot;1234567&quot;;
+shipmentProperties.Service = &quot;01&quot;;
+shipmentProperties.ShipTo = new UPSAPIv2.Models.Properties.ShipTo();
+shipmentProperties.ShipTo.Name = &quot;Jim Worm&quot;;
+shipmentProperties.ShipTo.AttentionName = &quot;Earth&quot;;
+shipmentProperties.ShipTo.Address1 = &quot;123 test street&quot;;
+shipmentProperties.ShipTo.Address2 = &quot;Suite 42&quot;;
+shipmentProperties.ShipTo.Phone = &quot;9511234567&quot;;
+shipmentProperties.ShipTo.City = &quot;Temecula&quot;;
+shipmentProperties.ShipTo.State = &quot;CA&quot;;
+shipmentProperties.ShipTo.Zip = &quot;92590&quot;;
+
+shipmentProperties.ShipmentCharges = new List&lt;UPSAPIv2.Models.Properties.ShipmentCharges&gt;();
+UPSAPIv2.Models.Properties.ShipmentCharges shipmentCharge = new UPSAPIv2.Models.Properties.ShipmentCharges
+{
+    Type = &quot;01&quot;,
+    BillShipper = &quot;Y&quot;,
+    AccountNumber = &quot;[UPS ACCT NUMBER]&quot;
+};
+shipmentProperties.ShipmentCharges.Add(shipmentCharge);
+
+shipmentProperties.Packages = new List&lt;UPSAPIv2.Models.Properties.Packages&gt;
+{
+    new UPSAPIv2.Models.Properties.Packages
+    {
+        PackagingType = &quot;02&quot;,
+        UnitOfLengthMeasurement = &quot;IN&quot;,
+        DimensionsLength = 10,
+        DimensionsWidth = 10,
+        DimensionsHeight = 10,
+        UnitOfWeightMeasurement = &quot;LBS&quot;,
+        PackageWeight = 28.4
+    }
+};
+if (!Shipments.CreateShipment(shipmentProperties))
+{
+    foreach (string e in UPSAPIv2.Public.Errors)
+    {
+        Console.WriteLine(e);
+    }
+    Console.ReadKey();
+    System.Environment.Exit(1);
+}
+string json = Shipments.GetJson();
+// -------
+// pass the JSON to the REST API
+// -------
+</code></pre><h3 id="shipments--functional">Shipments :: Functional</h3>
+<p>This method can be useful when data is pulled from database using raw SQL where the local data types are not known i.e. data types all converted to strings and placed in a list of dictionaries.
+Also see Normalizations.</p>
+<pre><code>UPSAPIv2.api.Shipments Shipments = new UPSAPIv2.api.Shipments();
+UPSAPIv2.ShipmentParams ShipmentParams = new UPSAPIv2.ShipmentParams();
+ShipmentParams.Service = &quot;01&quot;;
+ShipmentParams.ShipTo = new Dictionary&lt;string, string&gt;()
+{
+    {&quot;Name&quot;,&quot;Bob Vlla&quot; },
+    {&quot;AttentionName&quot;,&quot;AttentionName&quot; },
+    {&quot;Address1&quot;,&quot;123 Test Street&quot; },
+    {&quot;Address2&quot;,&quot;Suite 123&quot; },
+    {&quot;Phone&quot;,&quot;9518051234&quot; },
+    {&quot;City&quot;,&quot;Test City&quot; },
+    {&quot;State&quot;,&quot;CA&quot; },
+    {&quot;Zip&quot;,&quot;92590&quot; }
+};
+ShipmentParams.ShipmentCharges = new List&lt;Dictionary&lt;string, string&gt;&gt;();
+Dictionary&lt;string, string&gt; shipcharge = new Dictionary&lt;string, string&gt;();
+shipcharge[&quot;Type&quot;] = &quot;01&quot;;
+shipcharge[&quot;BillShipper&quot;] = &quot;Y&quot;;
+shipcharge[&quot;AccountNumber&quot;] = &quot;[UPS ACCT NUMBER]&quot;;
+ShipmentParams.ShipmentCharges.Add(shipcharge);
+ShipmentParams.Packages = new List&lt;Dictionary&lt;string, string&gt;&gt;();
+Dictionary&lt;string,string&gt; package = new Dictionary&lt;string, string&gt;()
+{
+    {&quot;PackagingType&quot;,&quot;02&quot;},
+    {&quot;UnitOfLengthMeasurement&quot;,&quot;IN&quot;},
+    {&quot;DimensionsLength&quot;,&quot;10&quot;},
+    {&quot;DimensionsWidth&quot;,&quot;20&quot;},
+    {&quot;DimensionsHeight&quot;,&quot;30&quot;},
+    {&quot;UnitOfWeightMeasurement&quot;,&quot;LBS&quot;},
+    {&quot;PackageWeight&quot;,&quot;20.0&quot;}
+};
+ShipmentParams.Packages.Add(package);
+// create the request
+if (!Shipments.CreateShipment(ShipmentParams))
+{
+    foreach(string e in UPSAPIv2.Public.Errors)
+    {
+        Console.WriteLine(e);
+    }
+    Console.ReadKey();
+    System.Environment.Exit(1);
+}
+string json = Shipments.GetJson();
+// -------
+// pass the JSON to the REST API
+// -------
+</code></pre><h3 id="retrieve-labels">Retrieve Labels</h3>
+<p>  After the API call run this to get labels and tracking numbers from the request.</p>
+<pre><code>  UPSAPIv2.api.Label Label = new UPSAPIv2.api.Label();
+  if (_l.GetProcessLabelResponse(result))
+        {
+            // loop all the tracking numbers
+            foreach(string l in Label.TrackingNumbers)
+            {
+                Console.WriteLine($&quot;{l}&quot;);
+            }
+            // loop all the labels
+            foreach (string l in Label.Labels)
+            {
+                Console.WriteLine($&quot;{l}&quot;);
+            }
+        }
+        else
+        {
+            foreach(string e in UPSAPIv2.Public.Errors)
+            {
+                Console.WriteLine($&quot;{e}&quot;);
+            }
+        }
+</code></pre><h3 id="address-validation--object-oriented">Address Validation :: Object Oriented</h3>
+<h3 id="address-validation--functional">Address Validation :: Functional</h3>
+<h3 id="normalizations">Normalizations</h3>
+<p>  These will map a typical data structure in a 3rd-party application to the UPS schema for a transaction where possible. This reducing the need for aliasing in the SQL query.</p>
+<h4 id="iqms">IQMS</h4>
+<pre><code>  // real
+  UPSAPIv2.Normalize.IQMS.Normalize Normalize = new UPSAPIv2.Normalize.IQMS.Normalize();
+
+  // pseudo code
+  string sql = &quot;select * from ship_to where id = :ship_to_id&quot;;
+  Dictionary&lt;string, string&gt; data = Your.Database.Abstraction.Get(sql, columns, ship_to_id);
+  ...
+
+  // real
+  Normalize.ShipTo(ref data);
+  ...
+  // call Shipments.CreateShipment() using the &quot;Functional&quot; method above
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UPSAPI-v2/blob/main/UPSAPI/articles/usage_examples.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

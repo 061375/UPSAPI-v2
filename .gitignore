@@ -1,0 +1,5 @@
+App.config
+*.log
+**/bin/Debug/
+**/bin/Release/
+**/obj/

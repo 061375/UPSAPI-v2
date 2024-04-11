@@ -1,0 +1,475 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Working/Aquamor/UPSAPI-v2/UPSAPI",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "9CLTTymdUVyGtdjxrgstW0hQ9DsirjneJsGG3XnUm3s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/documentation.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/documentation.html",
+          "hash": "5wjH85m+1aLmj+XYkuX21IazyggR02hh6VC98k1kfDM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "xjGu8JO4xr0Iug+4UoSCFv4rFz6aa8wnjWDAJZOuYcA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/usage_examples.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/usage_examples.html",
+          "hash": "tkIn9sa9e/Qf3W9z4WXW2O4niHe48rfBIh7wu3Sqq4s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/version.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/version.html",
+          "hash": "O3+wScM/j0dkTxJkQWCFTCtvPZGtEYTl33LBelsyEQw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Vn9eXDnivALJX0UD14lTRCQU1OTmLE0JKdjmmPCJxEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.AddressValid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.AddressValid.html",
+          "hash": "uCpVYD0k5H619ULTGhCCESZDUzFoejBq88yI2t82EPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.LabelParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.LabelParams.html",
+          "hash": "qbEMYAO9B7V68k2S1WxuzrRJxKmbCuphCufGaT3cfr8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Models.Properties.AddressRequestOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Models.Properties.AddressRequestOptions.html",
+          "hash": "2k+SZE9APyvE9MiQgL3zjSk5VXiBMF2KRQdageqEjqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Models.Properties.AddressValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Models.Properties.AddressValidation.html",
+          "hash": "bCzAesWjmrJha8FJVoeQ9NjULS0ZcYySLu0qLURkGUM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Models.Properties.LabelParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Models.Properties.LabelParameters.html",
+          "hash": "Am+R39wt3vz3PfIL/QmZbB5RjmWOJJdqfCJNXDnYZkU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Models.Properties.Packages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Models.Properties.Packages.html",
+          "hash": "joF9HQS5jichM1qCB5Q+DM79HUbPdaTlc3nFgfvkgGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Models.Properties.ReceiptParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Models.Properties.ReceiptParameters.html",
+          "hash": "brYYbXFXWVlUBQqEdg2CwvD3zYBVz8XRvKp6EB3MlAc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Models.Properties.ShipFrom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Models.Properties.ShipFrom.html",
+          "hash": "7L/u2IKGqW+anYEcBP3nIZn35Ic+bMwTRKcFbgfKRm0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Models.Properties.ShipTo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Models.Properties.ShipTo.html",
+          "hash": "kr5HofGK5j+Ei/vvG7bOpCKOzgw+U192NbAWxVjeRpI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Models.Properties.ShipmentCharges.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Models.Properties.ShipmentCharges.html",
+          "hash": "bM+nZmr9PwKtCPqjSUGP1aeDzrXg0unRc4nUHWaD+kc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Models.Properties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Models.Properties.html",
+          "hash": "YsyhE0xdwzjzY7ukMHYd4DoK98TVPlWJuHMBc8l112M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Normalize.IQMS.Normalize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Normalize.IQMS.Normalize.html",
+          "hash": "soOlSoktJVpeSXZB0BlFgzk9dRhadJxhE/4ePfe+moE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Normalize.IQMS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Normalize.IQMS.html",
+          "hash": "6bvgBMZ6ZaiAEzE08MwsYXnpiPASC//26c/8aUs9aPg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.Public.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.Public.html",
+          "hash": "cEVfOkDowXpPRnkEZCd+S/cmQGOzON5Z9gRoIdPg30s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.ShipmentParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.ShipmentParams.html",
+          "hash": "Y1zVIzRICVJKMhmMoy9RyR2ZBuv+IESc5YdLXP+PMVw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.ShipmentProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.ShipmentProperties.html",
+          "hash": "2p+RI7I8u4IkUEG+7xKlU92v4kWHN2/Y23T7ooyA3rM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.UPS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.UPS.html",
+          "hash": "+9KWrTm+Qq0yOCmU7ZO5MOVMyrQaTKCAPfdnWC68rtA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.UPSBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.UPSBase.html",
+          "hash": "oq6GZyLVz+If30VinquiCaWyQ3bQ9gorem69BMH+SF0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.api.AddressValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.api.AddressValidation.html",
+          "hash": "Vb6+cTMkJIcrUdWpadX03o9fIYd3I2SP0g5mg5/RZTM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.api.Label.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.api.Label.html",
+          "hash": "Kh/ET/qUkZltXe+btaTAvZmqd82vo6s8LyDx20D2q6Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.api.Shipments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.api.Shipments.html",
+          "hash": "/FaNsQnt7NIRyx7f0WPVh+t4nt3Wu6b+nCbGaXdjUdc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.api.html",
+          "hash": "imjsH0Gbq2pXKmILM7yBxaAAIm1G/KPeSJBjbezYuvo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/UPSAPIv2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UPSAPIv2.html",
+          "hash": "k9JSyo8l8v7KTexpRDUW1y9cFg+mPvlVenesTMA3bqI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "b/BBJWskcBwU3y3pZ4HY0/jbyqjww9jF9ePl1c0LV3g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 23,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
