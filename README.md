@@ -14,7 +14,4 @@ It does validate data and data types despite the UPS API only supporting strings
 - :droplet: Newtonsoft.JSON
 - :droplet: AQHelpers.dll
 
-**Dependancies**
-- :droplet: Newtonsoft.JSON
-
-[Documentation](UPSAPI/_site/index.html)
+[Documentation](https://github.com/061375/UPSAPI-v2/blob/main/UPSAPI/index.md)
