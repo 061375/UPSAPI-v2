@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,32 @@ namespace UPSAPIv2
 {
     internal class Helpers
     {
+        /// <summary>
+        /// Test if a type implements IList of T, and if so, determine T.
+        /// </summary>
+        public static bool TryListOfWhat(Type type, out Type innerType)
+        {
+            Contract.Requires(type != null);
+
+            var interfaceTest = new Func<Type, Type>(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IList<>) ? i.GetGenericArguments().Single() : null);
+
+            innerType = interfaceTest(type);
+            if (innerType != null)
+            {
+                return true;
+            }
+
+            foreach (var i in type.GetInterfaces())
+            {
+                innerType = interfaceTest(i);
+                if (innerType != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -18,7 +45,7 @@ namespace UPSAPIv2
         {
             string[] __else = new string[_else.Length + 1];
             __else[0] = test;
-            for(int i=0;i<_else.Length;i++)
+            for (int i = 0; i < _else.Length; i++)
             {
                 __else[i] = _else[i];
             }
@@ -126,9 +153,9 @@ namespace UPSAPIv2
         {
             if (Public.Errors.Count == 0)
                 Public.Errors.Add("ERROR: ");
-            for (int i=0;i<_params.Length;i++)
+            for (int i = 0; i < _params.Length; i++)
             {
-                message = message.Replace("{"+i+"}", _params[i]);
+                message = message.Replace("{" + i + "}", _params[i]);
             }
             for (int i = 0; i < 4; i++)
             {
@@ -138,7 +165,7 @@ namespace UPSAPIv2
             Public.Errors.Add(message);
             return message;
         }
-        public static bool MinMaxValid(int val,List<int> minmax, string error = null, params string[] _params)
+        public static bool MinMaxValid(int val, List<int> minmax, string error = null, params string[] _params)
         {
             bool _return = true;
             if (val <= minmax[0]) _return = false;
@@ -150,9 +177,9 @@ namespace UPSAPIv2
             }
             return _return;
         }
-        public static void InitDict(ref Dictionary<string,string> data, List<string> _keys)
+        public static void InitDict(ref Dictionary<string, string> data, List<string> _keys)
         {
-            foreach(string k in _keys)
+            foreach (string k in _keys)
             {
                 if (!data.ContainsKey(k)) { data[k] = ""; }
             }

@@ -34,13 +34,13 @@ namespace UPSAPIv2.api
         {
             // validate
             if (!Helpers.MinMaxValid(properties.Properties.MaximumCandidateListSize,
-                Validation.MaximumCandidateListSize,Messages.Errors["minmax"],
+                Validation.MaximumCandidateListSize, Messages.Errors["minmax"],
                 "MaximumCandidateListSize")) return false;
             // ! validate
             if (string.IsNullOrEmpty(properties.Properties.CountryCode)) properties.Properties.CountryCode = Params.DefaultCountry;
 
             XAVRequest.Request = new Models.Request();
-            switch(properties.Properties.RequestOption.ToString())
+            switch (properties.Properties.RequestOption.ToString())
             {
                 case "Validation":
                     XAVRequest.Request.RequestOption = "1";
@@ -73,7 +73,7 @@ namespace UPSAPIv2.api
             return true;
 
         }
-        public bool Create(Dictionary<string,string> Data)
+        public bool Create(Dictionary<string, string> Data)
         {
             // validate
             if (!Helpers.isset(Data, "RequestOption", Messages.Errors["required"], "RequestOption")) return false;
@@ -94,7 +94,7 @@ namespace UPSAPIv2.api
                     break;
                 default:
                     // error
-                    Helpers.RecordError(Messages.Errors["notrec"], "Validation","RequestOption", "Classification", "ValidationAndClassification");
+                    Helpers.RecordError(Messages.Errors["notrec"], "Validation", "RequestOption", "Classification", "ValidationAndClassification");
                     return false;
             }
             properties.Properties.TransactionReference = Data["TransactionReference"];
@@ -112,7 +112,7 @@ namespace UPSAPIv2.api
             properties.Properties.State = Data["State"];
             properties.Properties.Zip = Libs.Helpers.GetToInt32(Data["Zip"]);
             properties.Properties.ZipExt = Libs.Helpers.GetToInt32(Data["ZipExt"]);
-            properties.Properties.CountryCode = Libs.Helpers.isset(Data, "CountryCode",Params.DefaultCountry);
+            properties.Properties.CountryCode = Libs.Helpers.isset(Data, "CountryCode", Params.DefaultCountry);
 
             return Create(properties);
         }
@@ -132,7 +132,7 @@ namespace UPSAPIv2.api
                 return this;
             }
             root = Response.Get();
-            
+
             foreach (Models.Candidate p in root.XAVResponse.Candidate)
             {
                 Dictionary<string, string> tmp = new Dictionary<string, string>();

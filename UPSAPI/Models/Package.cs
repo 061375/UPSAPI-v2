@@ -31,6 +31,7 @@ namespace UPSAPIv2.Models
         public string OversizeIndicator { get; set; }
         [JsonProperty(PropertyName = "MinimumBillableWeightIndicator")]
         public string MinimumBillableWeightIndicator { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ReferenceNumber>))]
         [JsonProperty(PropertyName = "ReferenceNumber")]
         public List<ReferenceNumber> ReferenceNumber { get; set; }
         [JsonProperty(PropertyName = "AdditionalHandlingIndicator")]

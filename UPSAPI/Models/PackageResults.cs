@@ -20,7 +20,7 @@ namespace UPSAPIv2.Models
 
         [JsonProperty(PropertyName = "ShippingLabel")]
         public ShippingLabel ShippingLabel { get; set; }
-
+        [JsonConverter(typeof(SingleOrArrayConverter<ItemizedCharges>))]
         [JsonProperty(PropertyName = "ItemizedCharges")]
         public List<ItemizedCharges> ItemizedCharges { get; set; }
 

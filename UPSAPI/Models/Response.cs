@@ -14,7 +14,7 @@ namespace UPSAPIv2.Models
 
         [JsonProperty(PropertyName = "TransactionReference")]
         public TransactionReference TransactionReference { get; set; }
-
+        [JsonConverter(typeof(SingleOrArrayConverter<Errors>))]
         [JsonProperty(PropertyName = "Errors")]
         public List<Errors> Errors { get; set; }
 

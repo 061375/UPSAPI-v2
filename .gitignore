@@ -3,3 +3,4 @@ App.config
 **/bin/Debug/
 **/bin/Release/
 **/obj/
+**/.vs/

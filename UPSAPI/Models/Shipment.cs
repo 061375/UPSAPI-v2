@@ -29,10 +29,12 @@ namespace UPSAPIv2.Models
         public ShipmentRatingOptions ShipmentRatingOptions { get; set; }
         [JsonProperty(PropertyName = "MovementReferenceNumber")]
         public string MovementReferenceNumber { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ReferenceNumber>))]
         [JsonProperty(PropertyName = "ReferenceNumber")]
         public List<ReferenceNumber> ReferenceNumber { get; set; }
         [JsonProperty(PropertyName = "Service")]
         public Service Service { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<InvoiceLineTotal>))]
         [JsonProperty(PropertyName = "InvoiceLineTotal")]
         public List<InvoiceLineTotal> InvoiceLineTotal { get; set; }
         [JsonProperty(PropertyName = "NumOfPiecesInShipment")]
@@ -75,10 +77,13 @@ namespace UPSAPIv2.Models
         public string MasterCartonIndicator { get; set; }
         [JsonProperty(PropertyName = "ShipmentDate")]
         public string ShipmentDate { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Package>))]
         [JsonProperty(PropertyName = "Package")]
         public List<Package> Package { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<LabelSpecification>))]
         [JsonProperty(PropertyName = "LabelSpecification")]
         public List<LabelSpecification> LabelSpecification { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ReceiptSpecification>))]
         [JsonProperty(PropertyName = "ReceiptSpecification")]
         public List<ReceiptSpecification> ReceiptSpecification { get; set; }
     }

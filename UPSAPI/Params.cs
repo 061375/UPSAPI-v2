@@ -11,17 +11,17 @@ namespace UPSAPIv2
     {
         public static string RequestSubversion = "1801";
         public static string RequestOption = "nonvalidate";
-        public static string ShipmentDescription = "Customer Shipment";
-        public static string ShipperName = "Aquamor, LLC";
-        public static string ShipperAttentionName = "Aquamor, LLC";
+        public static string ShipmentDescription = "[** SHORT DESCRIPTION **]";
+        public static string ShipperName = "[** SHIPPER NAME **]";
+        public static string ShipperAttentionName = "[** ATTENTION NAME**]";
         public static string ShipperTaxIdentificationNumber = " ";
-        public static string ShipperPhone = "951-541-9517";
-        public static string ShipperNumber = "914RE3";
-        public static string ShipperFaxNumber = "951-296-1050";
-        public static List<string> ShipperAddress = new List<string>(){ "42188 Rio Nedo" };
-        public static string ShipperCity = "Temecula";
-        public static string ShipperState = "CA";
-        public static string ShipperZip = "92590";
+        public static string ShipperPhone = "";
+        public static string ShipperNumber = "";
+        public static string ShipperFaxNumber = "";
+        public static List<string> ShipperAddress = new List<string>(){ "","","" };
+        public static string ShipperCity = "";
+        public static string ShipperState = "";
+        public static string ShipperZip = "";
         public static string ShipperCountry = "US";
         public static string ShipmentChargeType = "01";
         public static string UnitOfLengthMeasurement = "IN";

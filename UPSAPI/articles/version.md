@@ -2,8 +2,10 @@
 
 Created :date: March 12, 2024
 
-Last update :arrow_up::date: April 11, 2024
+Last update :arrow_up::date: April 12, 2024
 
+* **1.0.0.4**
+*   :beetle: UPS responds with arrays and strings in the same node despite the documentation so I had to handle this
 * **1.0.0.3**
 *   :cat: .gitattributes
 *   :cat: Update links to *.md instead of *.html files

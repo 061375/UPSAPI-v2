@@ -23,6 +23,7 @@ namespace UPSAPIv2.Models
         public string ShipperReleaseIndicator { get; set; }
         [JsonProperty(PropertyName = "Notification")]
         public Notification Notification { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<HazMat>))]
         [JsonProperty(PropertyName = "HazMat")]
         public List<HazMat> HazMat { get; set; }
         [JsonProperty(PropertyName = "DryIce")]

@@ -11,6 +11,7 @@ namespace UPSAPIv2.Models
     {
         [JsonProperty(PropertyName = "Response")]
         public Response Response { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Candidate>))]
         [JsonProperty(PropertyName = "Candidate")]
         public List<Candidate> Candidate { get; set; }
     }

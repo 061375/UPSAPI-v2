@@ -17,7 +17,7 @@ namespace UPSAPIv2.api
 
         public List<string> TrackingNumbers = new List<string>();
         public List<string> Labels = new List<string>();
-        public Dictionary<string,string> LabelData = new Dictionary<string,string>();
+        public Dictionary<string, string> LabelData = new Dictionary<string, string>();
 
         /// <summary>
         /// convert the shipmentsd request into a JSON string
@@ -30,7 +30,7 @@ namespace UPSAPIv2.api
                 ContractResolver = new IgnoreEmptyObjectContractResolver(),
                 NullValueHandling = NullValueHandling.Ignore
             };
-            return JsonConvert.SerializeObject(request,settings);
+            return JsonConvert.SerializeObject(request, settings);
         }
         /// <summary>
         /// 
@@ -39,7 +39,7 @@ namespace UPSAPIv2.api
         /// <returns></returns>
         public bool GetProcessLabelResponse(string json)
         {
-            if(!Response.Parse(json))
+            if (!Response.Parse(json))
             {
                 return false;
             }
@@ -60,7 +60,7 @@ namespace UPSAPIv2.api
         /// <returns></returns>
         public bool RequestLabel(LabelParams labelParams)
         {
-            if(!Validate()) { return false; }
+            if (!Validate()) { return false; }
             request.TrackingNumber = labelParams.TrackingNumber;
             request.MailInnovationsTrackingNumber = labelParams.MailInnovationsTrackingNumber;
             Request()

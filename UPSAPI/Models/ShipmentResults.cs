@@ -13,7 +13,7 @@ namespace UPSAPIv2.Models
         public ShipmentCharges ShipmentCharges { get; set; }
         [JsonProperty(PropertyName = "ShipmentIdentificationNumber")]
         public string ShipmentIdentificationNumber { get; set; }
-
+        [JsonConverter(typeof(SingleOrArrayConverter<PackageResults>))]
         [JsonProperty(PropertyName = "PackageResults")]
         public List<PackageResults> PackageResults { get; set; }
 

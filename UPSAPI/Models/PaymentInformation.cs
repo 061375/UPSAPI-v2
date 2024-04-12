@@ -9,6 +9,7 @@ namespace UPSAPIv2.Models
 {
     internal class PaymentInformation
     {
+        [JsonConverter(typeof(SingleOrArrayConverter<ShipmentCharge>))]
         [JsonProperty(PropertyName = "ShipmentCharge")]
         public List<ShipmentCharge> ShipmentCharge { get; set; }
     }

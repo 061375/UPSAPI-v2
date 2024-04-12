@@ -16,7 +16,7 @@ namespace UPSAPIv2
             Public.Errors.Clear();
             try
             {
-                if(string.IsNullOrWhiteSpace(json))
+                if (string.IsNullOrWhiteSpace(json))
                 {
                     Public.Errors.Add(Messages.Errors["unknown"]);
                     return false;
